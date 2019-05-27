@@ -1,3 +1,4 @@
+package com.skilldistillery.jets;
 
 public class TransportShip extends StarShip implements TransportShipUtilities{
 
@@ -8,9 +9,16 @@ public class TransportShip extends StarShip implements TransportShipUtilities{
 	
 	public TransportShip() {}
 	
-	public TransportShip(double speed, double price, String model, int crewSize) {
+	public TransportShip(String vesselName, String model, double speed,   
+			double price, double fuelCapactiy, int crewSize, int totalTonsSupplies) {
 		
 	}
+	public TransportShip(String vesselName, String model, double speed,   
+			double price, double fuelCapacity, int crewSize, 
+			int totalTonsSupplies, boolean suppliesLoaded) {
+		
+	}
+	
 	
 	
 	@Override
