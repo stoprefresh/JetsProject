@@ -40,7 +40,7 @@ public class MenuNavigation extends Station{
 							totalTonsSupplies, suppliesLoaded);
 					dockedShips.add(newShip);
 
-				} else {
+				} else if(isWarship.equalsIgnoreCase("na")){
 					StarShip newShip = new StandardShip(vesselName, model, speed, price, fuelCapacity, crewSize);
 					dockedShips.add(newShip);
 				}
@@ -73,10 +73,17 @@ public String getFileName(Scanner in)  {
 			System.out.println("");
 			choice = in.nextLine();
 			if(choice.equalsIgnoreCase("y")) {
+				System.out.println("\n|================================|");
+				System.out.println("|     Enter your file choice     |");
+				System.out.println("|     in the following format    |");
+				System.out.println("|     ex. 'shipRoster.txt'       |");
 				fileName = in.nextLine();
 				choiceValid = true;
 			}
 			else if(choice.equalsIgnoreCase("n")) {
+				System.out.println("\n|================================|");
+				System.out.println("|    You have elected to load      |");
+				System.out.println("|    the default ship package.     |");
 				fileName = "shipRoster.txt";
 				choiceValid = true;
 			}
@@ -91,9 +98,16 @@ public String getFileName(Scanner in)  {
 			System.err.println(e);
 		}
 		}
+		for (int i = 0; i < 12; i++) {
+			System.out.print("*  ");
+			waitForMillis(200);
+		}
+		System.out.println("Thank you " + getUserName() + ", the file you have ");
+		System.out.println(" selected to use is as follows : " + fileName);
 		blankSpaceReset();
 		return fileName;
 	}
+
 public void saveStarShips(String outputFileName, ArrayList<StarShip> dockedShips) {
 
 }

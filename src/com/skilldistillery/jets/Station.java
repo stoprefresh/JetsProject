@@ -7,6 +7,7 @@ public class Station {
 
 	private List<StarShip> dockedShips;
 	private List<StarShip> disembarked;
+
 	private int soulsAboard;
 	private String userName;
 	boolean choiceValid, gameRun;
@@ -82,6 +83,37 @@ public class Station {
 			Thread.sleep(millis);
 		} catch (InterruptedException e) {
 		}
+	}
+	public List<StarShip> getDockedShips() {
+		return dockedShips;
+	}
+	
+	public void setDockedShips(List<StarShip> dockedShips) {
+		this.dockedShips = dockedShips;
+	}
+	
+	public List<StarShip> getDisembarked() {
+		return disembarked;
+	}
+	
+	public void setDisembarked(List<StarShip> disembarked) {
+		this.disembarked = disembarked;
+	}
+	
+	public int getSoulsAboard() {
+		return soulsAboard;
+	}
+	
+	public void setSoulsAboard(int soulsAboard) {
+		this.soulsAboard = soulsAboard;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 }
