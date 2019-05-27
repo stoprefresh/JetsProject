@@ -1,4 +1,9 @@
-## Jets Project
+# Jets Project
+
+##### Programmer Info.
+###### Author *Miguel Marsiglia*
+###### Start Date *May 24, 2019*
+ 
 
 #### Skill Distillery Week 3 - Weekend Homework
 
@@ -6,5 +11,19 @@
 
 ##### Technologies Used
 
+ 1. github
+ 2. Java
+ 3. Eclipse
+ 4. UML
+ 
 
-##### Lessons Learned
+
+##### UML Listing
+
+###### Lessons Learned
+
+
+
+‎⁨
+
+
