@@ -7,7 +7,8 @@
 
 #### Skill Distillery Week 3 - Weekend Homework
 
- *Description
+ This program allows you to generate an array of StarShips that can accomplish various simple tasks based on their type. 
+ The main menu will allow you to move between the groups and command individual ship types to accomlpish their tasks. 
 
 ##### Technologies Used
 
@@ -17,11 +18,10 @@
  4. UML
  
 
-
-##### UML Listing
-
 ###### Lessons Learned
 
+ *Trying to add too much into the program before a baseline is in place.
+ *Understanding how to use BufferedReader
 
 
 ‎⁨
