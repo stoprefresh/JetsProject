@@ -14,7 +14,7 @@ public class StarShipApp {
 
 	public void startApp() {
 
-		Station homebase = new Station();
+		SpaceStation homebase = new SpaceStation();
 
 		Scanner kb = new Scanner(System.in);
 
