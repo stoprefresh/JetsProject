@@ -533,6 +533,7 @@ public class SpaceStation {
 	private double ensureEntryDouble(Scanner in) {
 		double entry = 0;
 
+		
 		try {
 
 			entry = Double.parseDouble(in.nextLine());

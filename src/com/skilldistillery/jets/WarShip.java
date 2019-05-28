@@ -25,10 +25,6 @@ public class WarShip extends StarShip implements WarShipUtilities {
 		super.setLaunched(false);
 	}
 	
-
-    
-	
-	
 	@Override
 	public String toString() {
 		return super.toString();
