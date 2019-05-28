@@ -5,15 +5,63 @@ public abstract class StarShip {
 	protected double speed, price, range, fuelCapacity;
 	protected String model, vesselName;
 	protected int crewSize;
+	protected boolean launched;
+
+	
+	public void returning() {
+		System.out.println("Preparing [" + getVesselName() + "] for docking in ");
+    	loading();
+    	System.out.print("\n3 ");
+    	loading();
+    	System.out.print("\n2 ");
+    	loading();
+    	System.out.print("\n1 ");
+    	System.out.println(" [" + getVesselName() + "] has reconnected.");
+    	setLaunched(false);
+	}
+	
+	
+	
+	public void depart() {
+
+		System.out.println("Preparing [" + getVesselName() + "] for launch in ");
+    	loading();
+    	System.out.print("\n3 ");
+    	loading();
+    	System.out.print("\n2 ");
+    	loading();
+    	System.out.print("\n1 ");
+    	System.out.println(" [" + getVesselName() + "] is away.");
+    	System.out.println(" [" + getRange() + " (hrs)-Continuous Burn available]");
+    	setLaunched(true);
+    }
+	
+	public boolean isLaunched() {
+		return launched;
+	}
+
+	public void setLaunched(boolean launched) {
+		this.launched = launched;
+	}
 
 	public StarShip() {
 	}
 	
-	public double getSpeed() {
+	public StarShip(String vesselName, String model, double speed,   
+			double price, double fuelCapacity, int crewSize) {
+		setVesselName(vesselName);
+		setModel(model);
+		setSpeed(speed);
+		setPrice(price);
+		setCrewSize(crewSize);
+		setFuelCapacity(fuelCapacity);
+	}
+	
+	protected double getSpeed() {
 		return speed;
 	}
 
-	public void setSpeed(double speed) {
+	protected void setSpeed(double speed) {
 		this.speed = speed;
 	}
 
@@ -23,54 +71,67 @@ public abstract class StarShip {
 				+ ", model=" + model + ", vesselName=" + vesselName + ", crewSize=" + crewSize + "]";
 	}
 
-	public double getPrice() {
+	protected double getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	protected void setPrice(double price) {
 		this.price = price;
 	}
 
-	public double getRange() {
+	protected double getRange() {
 		return range;
 	}
 
-	public void setRange(double fuelCapacity) {
+	protected void setRange(double fuelCapacity) {
 		double r = (((fuelCapacity/.00325) / 60) / 24);
 		this.range = (double) Math.round(r * 100) / 100;
 		
 	}
 
-	public double getFuelCapacity() {
+	protected double getFuelCapacity() {
 		return fuelCapacity;
 	}
 
-	public void setFuelCapacity(double fuelCapacity) {
+	protected void setFuelCapacity(double fuelCapacity) {
 		this.fuelCapacity = fuelCapacity;
 	}
 
-	public String getModel() {
+	protected String getModel() {
 		return model;
 	}
 
-	public void setModel(String model) {
+	protected void setModel(String model) {
 		this.model = model;
 	}
 
-	public String getVesselName() {
+	protected String getVesselName() {
 		return vesselName;
 	}
 
-	public void setVesselName(String vesselName) {
+	protected void setVesselName(String vesselName) {
 		this.vesselName = vesselName;
 	}
 
-	public int getCrewSize() {
+	protected int getCrewSize() {
 		return crewSize;
 	}
 
-	public void setCrewSize(int crewSize) {
+	protected void setCrewSize(int crewSize) {
 		this.crewSize = crewSize;
+	}
+	protected static void waitForMillis(long millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+		}
+	}
+	
+	protected void loading() {
+		for (int i = 0; i < 12; i++) {
+			System.out.print("*  ");
+			waitForMillis(60);
+		}
 	}
 	
 	@Override
@@ -91,9 +152,6 @@ public abstract class StarShip {
 		result = prime * result + ((vesselName == null) ? 0 : vesselName.hashCode());
 		return result;
 	}
-
-
-
 
 	@Override
 	public boolean equals(Object obj) {

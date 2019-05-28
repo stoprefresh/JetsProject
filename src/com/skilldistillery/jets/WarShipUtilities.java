@@ -3,9 +3,11 @@ package com.skilldistillery.jets;
 public interface WarShipUtilities {
 
 	
-	public void engage();
+	boolean engage();
 	
-	public void defend();
+	boolean defend();
+	
+	boolean prelaunch();
 	
 	
 }

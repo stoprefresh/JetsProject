@@ -2,10 +2,9 @@ package com.skilldistillery.jets;
 
 public interface TransportShipUtilities {
 
+	boolean loadSupplies();
 	
+	boolean offloadSupplies();
 	
-	public void loadSupplies();
-	
-	public void offloadSupplies();
 	
 }
