@@ -22,6 +22,7 @@
 
  1. Trying to add too much into the program before a baseline is in place.
  2. Understanding how to use BufferedReader
+ 3. Using interfaces for various classes.
 
 
 ‎⁨
